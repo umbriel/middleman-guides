@@ -1,10 +1,5 @@
----
-layout: layout
----
-
 <header class="hero" role="banner">
-  <%= partial "partials/global_navigation" %>
-  <section class="body-content-container wrap-container">
+  <section class="wrap-container">
     <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
       class: "hero-content-logo" %>
     <h2 class="hero-headline"><%= t("index.headline") %></h2>
@@ -21,7 +16,7 @@ layout: layout
   </section>
 </header>
 
-<div class="body-content-container wrap-container" role="main">
+<div class="wrap-container" role="main">
   <section class="introduction">
     <div class="introduction-container">
       <div class="introduction-item second-graphic">

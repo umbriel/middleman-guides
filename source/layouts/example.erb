@@ -1,12 +1,10 @@
 <% wrap_layout :layout do %>
-  <%= partial "partials/global_navigation" %>
-
-  <div class="body-content-container wrap-container">
+  <div class="wrap-container">
     <nav class="sidebar">
       <%= partial 'partials/sites_built_with_nav' %>
     </nav>
 
-    <main class="main" role="main">
+    <main role="main">
       <%= yield %>
     </main>
   </div>

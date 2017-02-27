@@ -1,5 +1,3 @@
-set :layout, :article
-
 activate :i18n
 activate :directory_indexes
 activate :autoprefixer
@@ -17,6 +15,9 @@ activate :external_pipeline,
   latency: 1
 
 proxy "_redirects", "netlify-redirects", ignore: true
+
+page "/advanced/*", layout: "sidebar"
+page "/basics/*", layout: "sidebar"
 
 configure :development do
   activate :livereload do |reload|
@@ -41,5 +42,3 @@ helpers do
     link_to(caption, url, options)
   end
 end
-
-page "/localizable/community/built_using_middleman", layout: :example
