@@ -4,7 +4,7 @@ layout: layout
 
 <header class="hero" role="banner">
   <%= partial "partials/global_navigation" %>
-  <section class="body-content-container wrap-container" data-waypoint="hero-content">
+  <section class="body-content-container wrap-container">
     <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
       class: "hero-content-logo" %>
     <h2 class="hero-headline"><%= t("index.headline") %></h2>
@@ -23,7 +23,7 @@ layout: layout
 
 <div class="body-content-container wrap-container" role="main">
   <section class="introduction">
-    <div class="introduction-container" data-waypoint="introduction-container">
+    <div class="introduction-container">
       <div class="introduction-item second-graphic">
         <div class="introduction-item-graphic-wrapper">
           <div class="introduction-browser browser">
