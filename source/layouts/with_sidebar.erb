@@ -1,0 +1,13 @@
+<% wrap_layout :layout do %>
+  <!-- <%= partial "partials/docsearch" %> -->
+
+  <div class="c-container">
+    <nav class="c-site-frame__content-sidebar">
+      <%= partial "partials/documentation_nav" %>
+    </nav>
+
+    <div class="c-site-frame__content-main js-anchor-links">
+      <%= yield %>
+    </div>
+  </div>
+<% end %>

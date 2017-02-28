@@ -9,11 +9,23 @@
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
-    <div class="c-frame">
-      <%= partial "partials/global_navigation" %>
-      <%= yield %>
+    <div class="c-site-frame">
+      <%= partial "partials/site_navigation" %>
+
+      <% if content_for?(:page_header) %>
+        <header role="banner">
+          <%= yield_content :page_header %>
+          <%= current_page.data.title %>
+        </header>
+      <% end %>
+
+      <main class="c-site-frame__body" role="main">
+        <%= yield %>
+      </main>
+
       <%= partial "partials/site_footer" %>
     </div>
+
     <%= javascript_include_tag "site" %>
     <%= partial "partials/tracking" %>
   </body>
