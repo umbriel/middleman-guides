@@ -21,8 +21,10 @@ $_site-frame-header-height: 4rem;
   @include clearfix;
   flex-grow: 1;
 
-  height: calc(100vh - $_site-frame-header-height);
-  overflow: hidden;
+  .c-site-frame--with-sidebar & {
+    height: calc(100vh - #{$_site-frame-header-height});
+    overflow: hidden;
+  }
 }
 
 .c-site-frame__content-sidebar {
@@ -31,7 +33,7 @@ $_site-frame-header-height: 4rem;
   margin-right: 4%;
 
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .c-site-frame__content-main {
@@ -39,5 +41,5 @@ $_site-frame-header-height: 4rem;
   width: 73%;
 
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 }

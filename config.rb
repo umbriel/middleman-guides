@@ -16,8 +16,8 @@ activate :external_pipeline,
 
 proxy "_redirects", "netlify-redirects", ignore: true
 
-page "/advanced/*", layout: "with_sidebar"
-page "/basics/*", layout: "with_sidebar"
+page "/advanced/*", layout: "documentation"
+page "/basics/*", layout: "documentation"
 
 configure :development do
   activate :livereload do |reload|

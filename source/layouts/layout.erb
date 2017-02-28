@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="<%= I18n.locale %>">
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title><%= page_title %></title>
-    <%= stylesheet_link_tag "site" %>
-  </head>
-  <body>
-    <div class="c-site-frame">
-      <%= partial "partials/site_navigation" %>
+<% wrap_layout :core do %>
+  <div class="c-site-frame">
+    <%= partial "partials/site_navigation" %>
 
-      <% if content_for?(:page_header) %>
-        <header role="banner">
-          <%= yield_content :page_header %>
-          <%= current_page.data.title %>
-        </header>
-      <% end %>
+    <main class="c-site-frame__body" role="main">
+      <%= yield %>
+    </main>
 
-      <main class="c-site-frame__body" role="main">
-        <%= yield %>
-      </main>
-
-      <%= partial "partials/site_footer" %>
-    </div>
-
-    <%= javascript_include_tag "site" %>
-    <%= partial "partials/tracking" %>
-  </body>
-</html>
+    <%= partial "partials/site_footer" %>
+  </div>
+<% end %>
